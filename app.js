@@ -5,7 +5,7 @@ const btnItems = document.querySelectorAll('.btnall');
 const up = document.querySelectorAll('.up');
 const levels = Array.from(document.querySelectorAll('.level'));
 const passive = document.getElementById('passive');
-const upText = document.getElementById()
+const upText = document.querySelectorAll('.upText');
 
 let gold = 0;
 let planets = [{
@@ -51,6 +51,7 @@ function upgrade(planet) {
         pocket.textContent = `${gold}g`
         planets[planet].level += 1;
         levels[planet].textContent = `${planets[planet].level} lvl`;
+        upText.textContent = `${planets[planet].levelCost[planets[planet]]}g`;
 
 
         setInterval(function() {
