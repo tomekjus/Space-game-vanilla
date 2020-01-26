@@ -7,11 +7,12 @@ const levels = Array.from(document.querySelectorAll('.level'));
 const passive = document.getElementById('passive');
 const upText = document.querySelectorAll('.upText');
 
+
 let gold = 0;
 let planets = [{
         name: "mars",
         level: 0,
-        levelCost: [10, 20, 30, 40],
+        levelCost: [20, 20, 30, 40],
         passiveGold: [1, 3, 6, 9]
     },
     {
@@ -27,6 +28,7 @@ let planets = [{
         levelCost: [20, 40, 30, 40]
     }
 ];
+let passiveGlobal = gold + planets.passiveGold;
 
 
 function startHandler() {
@@ -54,17 +56,19 @@ function upgrade(planet) {
         upText.textContent = `${planets[planet].levelCost[planets[planet]]}g`;
 
 
-        setInterval(function() {
-            gold = gold + planets[planet].passiveGold[planets[planet].level - 1];
-            pocket.textContent = `${gold}g`;
-            passive.textContent = `${planets[planet].passiveGold[planets[planet].level - 1]}`
-        }, 1000);
+        // setInterval(function() {
+        //     gold = gold + planets[planet].passiveGold[planets[planet].level - 1];
+        //     pocket.textContent = `${gold}g`;
+        //     passive.textContent = `${planets[planet].passiveGold[planets[planet].level - 1]}`
+        // }, 1000);
 
 
     } else {
         alert("Za mało złota kurwiu");
     }
 }
+
+setInterval(passiveGlobal, 1000);
 
 
 start.addEventListener('click', startHandler);
