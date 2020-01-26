@@ -1,0 +1,43 @@
+.space {
+    background-image: url('../img/stars.svg');
+    background-color: #34495e;
+    height: 75%;
+    position: relative;
+}
+
+.planet {
+    height: 40px;
+    width: 40px;
+    background: linear-gradient(to bottom right,#d35400, #e67e22);
+    border-radius: 50%;
+    position: absolute;
+    left: 540px;
+    top: 130px;
+    /* box-shadow: 20px 20px 10px 2px #000000cc; */
+    animation: goAround 4s infinite;
+}
+
+@keyframes goAround {
+    50% {
+        left: calc(66% - 100px);
+        top: calc(85% - 100px);
+        /* transform: scale(0.4); */
+    }
+
+    100% {
+        z-index: 5;
+        /* transform: scale(1); */
+    }
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 200px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
+}

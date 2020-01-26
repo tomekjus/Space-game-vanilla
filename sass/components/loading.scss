@@ -1,0 +1,45 @@
+.loading {
+    opacity: 1;
+    z-index: -40;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+}
+
+.start-game {
+    position: fixed;
+    background-color: #34495e;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start:link,
+.start:visited,
+.back:link,
+.back:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 25px 50px;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+.start {
+    background-color: #3498db;
+    color: #FFF;
+    font-family: sans-serif;
+}
+
+.start:hover {
+    transform: translateY(-3px);
+}
+
+.start:active {
+    transform: translateY(-1px);
+}

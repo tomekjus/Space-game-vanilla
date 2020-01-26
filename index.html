@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magic Stars</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="loading" class="loading">
+        <div class="loading__start-game">
+            <a id="start" class="start btn-white" href="#">Start Journey</a>
+        </div>
+    </section>
+
+    <main>
+        <button id="hamburger" class="hamburger hamburger--active">
+            <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+            </span>
+        </button>
+        <div class="space">
+            <div id="main-planet" class="planet">
+                <!-- <div class="water"></div> -->
+            </div>
+            <div id="sun" class="sun"></div>
+        </div>
+        <div class="dashboard">
+            <div class="all-planets">
+                <div class="mars">
+                    <!-- Mars -->
+                    <div class="mars__planet"></div>
+                    <div id="mars-status" class="mars-status">
+                        <button class="up" onclick="upgrade(0)">
+                            <p id="upText"></p>
+                        </button>
+                        <div class="level">0 lvl</div>
+                    </div>
+                </div>
+                <div class="neptune">
+                    <!-- Neptune -->
+                    <div class="neptune__planet"></div>
+                    <div id="neptune-status" class="neptune-status">
+                        <div class="btn-box">
+                            <button class="up" onclick="upgrade(1)">Upgrade - cost: 10</button>
+                        </div>
+                        <div class="neptune-status-box">
+                            <div class="level">0 lvl</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="venus">
+                    <!-- venus -->
+                    <div class="venus__planet"></div>
+                    <div id="venus-status" class="venus-status">
+                        <div class="btn-box">
+                            <button class="up" onclick="upgrade(2)">Upgrade - cost: 10</button>
+                        </div>
+                        <div class="venus-status-box">
+                            <div class="level">0 lvl</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress">
+                <button class="btnall">Click</button>
+                <div id="pocket" class="pocket">0g</div>
+                <div id="passive" class="passive">0g</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>

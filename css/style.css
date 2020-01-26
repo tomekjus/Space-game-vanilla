@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+main {
+  height: 100vh; }
+
+.loading {
+  opacity: 1;
+  z-index: -40;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 1s; }
+
+.start-game {
+  position: fixed;
+  background-color: #34495e;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.start:link,
+.start:visited,
+.back:link,
+.back:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 50px;
+  border-radius: 100px;
+  transition: all .2s; }
+
+.start {
+  background-color: #3498db;
+  color: #FFF;
+  font-family: sans-serif; }
+
+.start:hover {
+  transform: translateY(-3px); }
+
+.start:active {
+  transform: translateY(-1px); }
+
+.space {
+  background-image: url("../img/stars.svg");
+  background-color: #34495e;
+  height: 75%;
+  position: relative; }
+
+.planet {
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(to bottom right, #d35400, #e67e22);
+  border-radius: 50%;
+  position: absolute;
+  left: 540px;
+  top: 130px;
+  /* box-shadow: 20px 20px 10px 2px #000000cc; */
+  animation: goAround 4s infinite; }
+
+@keyframes goAround {
+  50% {
+    left: calc(66% - 100px);
+    top: calc(85% - 100px);
+    /* transform: scale(0.4); */ }
+  100% {
+    z-index: 5;
+    /* transform: scale(1); */ } }
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  box-shadow: 0px 0px 80px 0px #f1c40f; }
+
+.dashboard {
+  background-color: #2f3640;
+  height: 25%;
+  display: flex; }
+
+.all-planets {
+  flex: 4; }
+
+.progress {
+  flex: 2;
+  height: 100%;
+  width: 100%; }
+
+.mars, .neptune, .venus {
+  height: 33.33%; }
+
+.mars-status, .venus-status, .neptune-status {
+  display: flex;
+  padding-left: 20px; }
+
+.btn-mars {
+  width: 60px;
+  height: 30px; }
+
+.up {
+  width: 120px;
+  height: 30px; }
+
+.level, .pocket, .passive {
+  height: 30px;
+  width: 60px; }
+
+.pocket, .passive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #34ace0;
+  font-weight: bold; }
+
+.level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: #1abc9c; }
+
+.mars {
+  display: flex;
+  align-items: center; }
+  .mars__planet {
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(to bottom right, #d35400, #e67e22);
+    border-radius: 50%; }
+
+.neptune {
+  display: flex;
+  align-items: center; }
+  .neptune__planet {
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(to bottom right, #2980b9, #3498db);
+    border-radius: 50%; }
+
+.venus {
+  display: flex;
+  align-items: center; }
+  .venus__planet {
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(to bottom right, #ccae62, #ffda79);
+    border-radius: 50%; }
+
+.btnall {
+  width: 200px;
+  height: 100px; }
+
+.hamburger {
+  position: absolute;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  outline: none;
+  right: 10px;
+  top: 10px;
+  z-index: 1; }
+
+.hamburger:hover .hamburger__inner::before {
+  transform: rotate(90deg); }
+
+.hamburger:hover .hamburger__inner::after {
+  transform: rotate(-90deg); }
+
+.hamburger__box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.hamburger__inner::before, .hamburger__inner::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #FFF;
+  position: absolute;
+  left: 0;
+  transition: transform .2s; }
+
+.hamburger__inner::before {
+  top: -10px; }
+
+.hamburger__inner::after {
+  top: 10px; }
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent; }
+
+.hamburger--active .hamburger__inner:before {
+  transform: translateY(10px) rotate(45deg); }
+
+.hamburger--active .hamburger__inner:after {
+  transform: translateY(-10px) rotate(-45deg); }

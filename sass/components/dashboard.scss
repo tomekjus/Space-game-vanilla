@@ -1,0 +1,97 @@
+.dashboard {
+    background-color: #2f3640;
+    height: 25%;
+    display: flex;
+}
+.all-planets {
+    flex: 4;
+}
+
+.progress {
+    flex: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.mars, .neptune, .venus {
+    height: 33.33%;
+}
+
+
+.mars-status, .venus-status, .neptune-status {
+    display: flex;
+    padding-left: 20px;
+}
+
+.btn-mars {
+    width: 60px;
+    height: 30px;
+}
+
+.up {
+    width: 120px;
+    height: 30px;
+}
+
+.level, .pocket, .passive {
+    height: 30px;
+    width: 60px;
+}
+
+.pocket, .passive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #34ace0;
+    font-weight: bold;
+}
+
+.level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: #1abc9c;
+}
+
+.mars {
+    display: flex;
+    align-items: center;
+    &__planet {
+        margin-left: 20px;
+        height: 50px;
+        width: 50px;
+        background: linear-gradient(to bottom right,#d35400, #e67e22);
+        border-radius: 50%;
+    }
+}
+
+.neptune {
+    display: flex;
+    align-items: center;
+    &__planet {
+        margin-left: 20px;
+        height: 50px;
+        width: 50px;
+        background: linear-gradient(to bottom right,#2980b9, #3498db);
+        border-radius: 50%;
+    }
+}
+
+.venus {
+    display: flex;
+    align-items: center;
+    &__planet {
+        margin-left: 20px;
+        height: 50px;
+        width: 50px;
+        background: linear-gradient(to bottom right,#ccae62, #ffda79);
+        border-radius: 50%;
+    }
+}
+
+.btnall {
+    width: 200px;
+    height: 100px;
+}
