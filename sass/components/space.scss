@@ -13,11 +13,36 @@
     position: absolute;
     left: 540px;
     top: 130px;
-    /* box-shadow: 20px 20px 10px 2px #000000cc; */
     animation: goAround 4s infinite;
+    display: none;
 }
 
 @keyframes goAround {
+    50% {
+        left: calc(66% - 100px);
+        top: calc(85% - 100px);
+        /* transform: scale(0.4); */
+    }
+
+    100% {
+        z-index: 5;
+        /* transform: scale(1); */
+    }
+}
+
+.neptune-planet {
+    height: 60px;
+    width: 60px;
+    background: linear-gradient(to bottom right,#2980b9, #3498db);
+    border-radius: 50%;
+    position: absolute;
+    left: 540px;
+    top: 130px;
+    animation: goAround2 4s  infinite;
+    display: none;
+}
+
+@keyframes goAround2 {
     50% {
         left: calc(66% - 100px);
         top: calc(85% - 100px);
@@ -40,4 +65,18 @@
     background-color: #f1c40f;
     border-radius: 50%;
     box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
+    animation: shadow 3s infinite both ease-in-out;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
+    }
+    50% {
+        box-shadow: 0px 0px 180px 0px rgba(241, 196, 15, 1);
+    }
+
+    100% {
+        box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
+    }
 }

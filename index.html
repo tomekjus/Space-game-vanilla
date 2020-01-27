@@ -15,7 +15,9 @@
             <a id="start" class="start btn-white" href="#">Start Journey</a>
         </div>
     </section>
-
+    <div id="info" class="info">
+        <button class="info__exit"></button>
+    </div>
     <main>
         <button id="hamburger" class="hamburger hamburger--active">
             <span class="hamburger__box">
@@ -23,9 +25,9 @@
             </span>
         </button>
         <div class="space">
-            <div id="main-planet" class="planet">
-                <!-- <div class="water"></div> -->
+            <div id="mars" class="planet">
             </div>
+            <div id="neptune" class="neptune-planet"></div>
             <div id="sun" class="sun"></div>
         </div>
         <div class="dashboard">
@@ -34,9 +36,7 @@
                     <!-- Mars -->
                     <div class="mars__planet"></div>
                     <div id="mars-status" class="mars-status">
-                        <button class="up" onclick="upgrade(0)">
-                            <p class="upText"></p>
-                        </button>
+                        <button class="up" onclick="upgrade(0)">Upgrade - cost:10</button>
                         <div class="level">0 lvl</div>
                     </div>
                 </div>
@@ -45,9 +45,7 @@
                     <div class="neptune__planet"></div>
                     <div id="neptune-status" class="neptune-status">
                         <div class="btn-box">
-                            <button class="up" onclick="upgrade(1)">
-                                <p class="upText"></p>
-                            </button>
+                            <button class="up" onclick="upgrade(1)">Upgrade - cost:50</button>
                         </div>
                         <div class="neptune-status-box">
                             <div class="level">0 lvl</div>
@@ -59,7 +57,7 @@
                     <div class="venus__planet"></div>
                     <div id="venus-status" class="venus-status">
                         <div class="btn-box">
-                            <button class="up" onclick="upgrade(2)">Upgrade - cost: 10</button>
+                            <button class="up" onclick="upgrade(2)">Upgrade - cost:200</button>
                         </div>
                         <div class="venus-status-box">
                             <div class="level">0 lvl</div>
@@ -68,9 +66,13 @@
                 </div>
             </div>
             <div class="progress">
-                <button class="btnall">Click</button>
-                <div id="pocket" class="pocket">0g</div>
-                <div id="passive" class="passive">0g</div>
+                <div class="pocket-box">
+                    <div id="pocket" class="pocket"> Gold: 0</div>
+                    <div id="passive" class="passive">Passive Gold: 0/s</div>
+                </div>
+                <div class="btnall-box">
+                    <button class="btnall btnall-ani">Click</button>
+                </div>
             </div>
         </div>
     </main>

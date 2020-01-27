@@ -11,6 +11,8 @@
     flex: 2;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .mars, .neptune, .venus {
@@ -29,12 +31,20 @@
 }
 
 .up {
-    width: 120px;
-    height: 30px;
+    width: 140px;
+    height: 35px;
+    background-color: #7f8c8d;
+    color: #ecf0f1;
+    border: none;
+    transition: color .6s;
 }
 
-.level, .pocket, .passive {
-    height: 30px;
+.up:hover {
+    color: #2ecc71;
+}
+
+.level {
+    height: 35px;
     width: 60px;
 }
 
@@ -42,9 +52,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
-    color: #34ace0;
+    background-color: #222;
+    color: #f1c40f;
     font-weight: bold;
+    width: 200px;
+    height: 30px;
 }
 
 .level {
@@ -52,7 +64,7 @@
     justify-content: center;
     align-items: center;
     background-color: #222;
-    color: #1abc9c;
+    color: #2ecc71;
 }
 
 .mars {
@@ -92,6 +104,44 @@
 }
 
 .btnall {
-    width: 200px;
-    height: 100px;
+    width: 180px;
+    height: 120px;
+    background-color: #7f8c8d;
+    color: #ecf0f1;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 3s;
+    cursor: pointer;
+}
+
+.btnall-ani {
+    transition: transform .2s;
+}
+
+.btnall:hover {
+    box-shadow: 0px 0px 40px 0px rgba(149,165,166,1);
+    color: #f1c40f;
+}
+
+.btnall-ani:hover {
+    transform: translateY(-4px);
+}
+
+.btnall-ani:active {
+    transform: translateY(4px);
+}
+
+.btnall-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.pocket-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

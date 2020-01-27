@@ -1,29 +1,30 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: fantasy, sans-serif;
+  letter-spacing: 1px; }
 
 main {
   height: 100vh; }
 
 .loading {
   opacity: 1;
-  z-index: -40;
+  z-index: 40;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   transition: opacity 1s; }
-
-.start-game {
-  position: fixed;
-  background-color: #34495e;
-  height: 100vh;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  .loading__start-game {
+    position: fixed;
+    background-color: #34495e;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 .start:link,
 .start:visited,
@@ -41,10 +42,24 @@ main {
   font-family: sans-serif; }
 
 .start:hover {
-  transform: translateY(-3px); }
+  transform: translateY(-3px);
+  box-shadow: 0px 0px 80px 0px #ecf0f1; }
 
 .start:active {
   transform: translateY(-1px); }
+
+.info {
+  height: 400px;
+  width: 600px;
+  background-color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 35; }
+  .info__exit {
+    width: 20px;
+    height: 20px; }
 
 .space {
   background-image: url("../img/stars.svg");
@@ -60,10 +75,30 @@ main {
   position: absolute;
   left: 540px;
   top: 130px;
-  /* box-shadow: 20px 20px 10px 2px #000000cc; */
-  animation: goAround 4s infinite; }
+  animation: goAround 4s infinite;
+  display: none; }
 
 @keyframes goAround {
+  50% {
+    left: calc(66% - 100px);
+    top: calc(85% - 100px);
+    /* transform: scale(0.4); */ }
+  100% {
+    z-index: 5;
+    /* transform: scale(1); */ } }
+
+.neptune-planet {
+  height: 60px;
+  width: 60px;
+  background: linear-gradient(to bottom right, #2980b9, #3498db);
+  border-radius: 50%;
+  position: absolute;
+  left: 540px;
+  top: 130px;
+  animation: goAround2 4s  infinite;
+  display: none; }
+
+@keyframes goAround2 {
   50% {
     left: calc(66% - 100px);
     top: calc(85% - 100px);
@@ -81,7 +116,16 @@ main {
   width: 200px;
   background-color: #f1c40f;
   border-radius: 50%;
-  box-shadow: 0px 0px 80px 0px #f1c40f; }
+  box-shadow: 0px 0px 80px 0px #f1c40f;
+  animation: shadow 3s infinite both ease-in-out; }
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px 80px 0px #f1c40f; }
+  50% {
+    box-shadow: 0px 0px 180px 0px #f1c40f; }
+  100% {
+    box-shadow: 0px 0px 80px 0px #f1c40f; } }
 
 .dashboard {
   background-color: #2f3640;
@@ -94,7 +138,9 @@ main {
 .progress {
   flex: 2;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
 
 .mars, .neptune, .venus {
   height: 33.33%; }
@@ -108,27 +154,36 @@ main {
   height: 30px; }
 
 .up {
-  width: 120px;
-  height: 30px; }
+  width: 140px;
+  height: 35px;
+  background-color: #7f8c8d;
+  color: #ecf0f1;
+  border: none;
+  transition: color .6s; }
 
-.level, .pocket, .passive {
-  height: 30px;
+.up:hover {
+  color: #2ecc71; }
+
+.level {
+  height: 35px;
   width: 60px; }
 
 .pocket, .passive {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
-  color: #34ace0;
-  font-weight: bold; }
+  background-color: #222;
+  color: #f1c40f;
+  font-weight: bold;
+  width: 200px;
+  height: 30px; }
 
 .level {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #222;
-  color: #1abc9c; }
+  color: #2ecc71; }
 
 .mars {
   display: flex;
@@ -161,8 +216,40 @@ main {
     border-radius: 50%; }
 
 .btnall {
-  width: 200px;
-  height: 100px; }
+  width: 180px;
+  height: 120px;
+  background-color: #7f8c8d;
+  color: #ecf0f1;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  transition: box-shadow 3s;
+  cursor: pointer; }
+
+.btnall-ani {
+  transition: transform .2s; }
+
+.btnall:hover {
+  box-shadow: 0px 0px 40px 0px #95a5a6;
+  color: #f1c40f; }
+
+.btnall-ani:hover {
+  transform: translateY(-4px); }
+
+.btnall-ani:active {
+  transform: translateY(4px); }
+
+.btnall-box {
+  flex: 1;
+  display: flex;
+  align-items: center; }
+
+.pocket-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
 
 .hamburger {
   position: absolute;
