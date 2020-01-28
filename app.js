@@ -5,39 +5,39 @@ const btnItems = document.querySelectorAll('.btnall');
 const up = document.querySelectorAll('.up');
 const levels = Array.from(document.querySelectorAll('.level'));
 const passive = document.getElementById('passive');
+const mars = document.getElementById('mars');
+const neptune = document.getElementById('neptune');
 
 
-let gold = 0;
+
+let gold = 1000;
 let passiveGold = [0];
-let planets = [{
+let planets = [
+    {
         name: "mars",
         level: 0,
         passiveGold: [1, 3, 6, 9],
         levelCost: [10, 30, 60, 90],
         buildings: [
             {
-                requiredLevel: 1,
-                building: "water"
+                requiredLevel: [2, 3, 4, 5],
+                building: ["water", "tree", "mountains","lava"],
+                buildingLevel: 0
             },
-            {
-                requiredLevel: 2,
-                building: "tree"
-            },
-            {
-                requiredLevel: 3,
-                building: "mountains"
-            },
-            {
-                requiredLevel: 4,
-                building: "lava"
-            }
         ]
     },
     {
         name: "neptune",
         level: 0,
         passiveGold: [3, 6, 9, 12],
-        levelCost: [50, 100, 150, 200]
+        levelCost: [50, 100, 150, 200],
+        buildings: [
+            {
+                requiredLevel: [2, 3, 4, 5],
+                building: ["water", "tree", "mountains","lava"],
+                buildingLevel: 0
+            },
+        ]
     },
     {
         name: "venus",
@@ -80,14 +80,25 @@ function upgrade(planet) {
              planetElement.style.display = "block";
         }
 
+        if(planets[planet].level == planets[planet].buildings[0].requiredLevel[planets[planet].buildings[0].buildingLevel]) {
+            planets[planet].name = mars
+            planets[planet].name = neptune
+            const div = document.createElement("div");
+            planets[planet].name.appendChild(div);
+            div.classList.add(planets[planet].buildings[0].building[planets[planet].buildings[0].buildingLevel]);
+            planets[planet].buildings[0].buildingLevel++
+
+
+        }
+
         build();
     } else {
-        alert("Za mało złota mój kurwo demonie");
+        alert("Za mało złota");
     }
 }
 
 function build() {
-    console.log("test");
+
 }
 
 function passiveGlobal() {
