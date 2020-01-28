@@ -80,3 +80,30 @@
         box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
     }
 }
+.water {
+    height: 16px;
+    width: 16px;
+    background-image: url('../../img/sea.svg');
+    position: absolute;
+    left: 12px;
+
+
+}
+.tree {
+    height: 16px;
+    width: 16px;
+    background-image: url('../../img/tree.svg');
+    position: absolute;
+    top: 12px;
+
+
+}
+.mountains {
+    height: 16px;
+    width: 16px;
+    background-image: url('../../img/mountains.svg');
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    z-index: 99999999999;
+}

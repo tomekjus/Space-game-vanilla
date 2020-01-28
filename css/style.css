@@ -10,7 +10,7 @@ main {
 
 .loading {
   opacity: 1;
-  z-index: 40;
+  z-index: -40;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -113,6 +113,29 @@ main {
     box-shadow: 0px 0px 180px 0px #f1c40f; }
   100% {
     box-shadow: 0px 0px 80px 0px #f1c40f; } }
+
+.water {
+  height: 16px;
+  width: 16px;
+  background-image: url("../../img/sea.svg");
+  position: absolute;
+  left: 12px; }
+
+.tree {
+  height: 16px;
+  width: 16px;
+  background-image: url("../../img/tree.svg");
+  position: absolute;
+  top: 12px; }
+
+.mountains {
+  height: 16px;
+  width: 16px;
+  background-image: url("../../img/mountains.svg");
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  z-index: 99999999999; }
 
 .dashboard {
   background-color: #2f3640;
