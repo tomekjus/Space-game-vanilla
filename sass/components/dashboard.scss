@@ -1,5 +1,5 @@
 .dashboard {
-    background-color: #2f3640;
+    background: linear-gradient(to bottom right,#9b59b6, #2f3640);
     height: 25%;
     display: flex;
 }
@@ -15,12 +15,12 @@
     justify-content: space-around;
 }
 
-.mars, .neptune, .venus {
+.mars, .neptune, .saturn {
     height: 33.33%;
 }
 
 
-.mars-status, .venus-status, .neptune-status {
+.mars-status, .saturn-status, .neptune-status {
     display: flex;
     padding-left: 20px;
 }
@@ -31,9 +31,9 @@
 }
 
 .up {
-    width: 140px;
+    width: 150px;
     height: 35px;
-    background-color: #7f8c8d;
+    background-color: #5758BB;
     color: #ecf0f1;
     border: none;
     transition: color .6s;
@@ -74,7 +74,7 @@
         margin-left: 20px;
         height: 50px;
         width: 50px;
-        background: linear-gradient(to bottom right,#d35400, #e67e22);
+        background-image: url('../../img/mars.svg');
         border-radius: 50%;
     }
 }
@@ -86,19 +86,19 @@
         margin-left: 20px;
         height: 50px;
         width: 50px;
-        background: linear-gradient(to bottom right,#2980b9, #3498db);
+        background-image: url('../../img/neptune.svg');
         border-radius: 50%;
     }
 }
 
-.venus {
+.saturn {
     display: flex;
     align-items: center;
     &__planet {
         margin-left: 20px;
         height: 50px;
         width: 50px;
-        background: linear-gradient(to bottom right,#ccae62, #ffda79);
+        background-image: url('../../img/saturn.svg');
         border-radius: 50%;
     }
 }
@@ -106,7 +106,7 @@
 .btnall {
     width: 180px;
     height: 120px;
-    background-color: #7f8c8d;
+    background-color: #5758BB;
     color: #ecf0f1;
     font-size: 20px;
     border: none;

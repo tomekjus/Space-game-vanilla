@@ -8,12 +8,13 @@
 .planet {
     height: 40px;
     width: 40px;
-    background: linear-gradient(to bottom right,#d35400, #e67e22);
+     // background: linear-gradient(to bottom right,#e84118, #c23616);
+    background-image: url('../../img/mars.svg');
     border-radius: 50%;
     position: absolute;
     left: 540px;
     top: 130px;
-    animation: goAround 4s infinite;
+    animation: goAround 12s infinite ease-in-out;
     display: none;
 }
 
@@ -33,16 +34,41 @@
 .neptune-planet {
     height: 60px;
     width: 60px;
-    background: linear-gradient(to bottom right,#2980b9, #3498db);
+    background-image: url('../../img/neptune.svg');
     border-radius: 50%;
     position: absolute;
     left: 540px;
     top: 130px;
-    animation: goAround2 4s  infinite;
+    animation: goAround2 12s  infinite ease-in-out;
     display: none;
 }
 
 @keyframes goAround2 {
+    50% {
+        left: calc(66% - 100px);
+        top: calc(85% - 100px);
+        /* transform: scale(0.4); */
+    }
+
+    100% {
+        z-index: 5;
+        /* transform: scale(1); */
+    }
+}
+
+.saturn-planet {
+    height: 80px;
+    width: 80px;
+    background-image: url('../../img/saturn.svg');
+    border-radius: 50%;
+    position: absolute;
+    left: 540px;
+    top: 130px;
+    animation: goAround3 12s  infinite ease-in-out;
+    display: none;
+}
+
+@keyframes goAround3 {
     50% {
         left: calc(66% - 100px);
         top: calc(85% - 100px);
@@ -62,22 +88,22 @@
     transform: translate(-50%, -50%);
     height: 200px;
     width: 200px;
-    background-color: #f1c40f;
+    background: linear-gradient(to bottom right,#f1c40f, #c0392b);
     border-radius: 50%;
     box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
-    animation: shadow 3s infinite both ease-in-out;
+    animation: shadow 4s infinite both ease-in-out;
 }
 
 @keyframes shadow {
     0% {
-        box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
+        box-shadow: 0px 0px 40px 0px rgba(241, 196, 15, 1);
     }
     50% {
         box-shadow: 0px 0px 180px 0px rgba(241, 196, 15, 1);
     }
 
     100% {
-        box-shadow: 0px 0px 80px 0px rgba(241, 196, 15, 1);
+        box-shadow: 0px 0px 40px 0px rgba(241, 196, 15, 1);
     }
 }
 .water {
@@ -104,6 +130,5 @@
     background-image: url('../../img/mountains.svg');
     position: absolute;
     top: 12px;
-    right: 10px;
-    z-index: 99999999999;
+    left: 20px;
 }

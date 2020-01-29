@@ -15,9 +15,9 @@
             <a id="start" class="start btn-white" href="#">Start Journey</a>
         </div>
     </section>
-    <div id="info" class="info">
-        <button class="info__exit"></button>
-    </div>
+    <!-- <div id="info" class="info">
+        <button class="info__exit">X</button>
+    </div> -->
     <main>
         <button id="hamburger" class="hamburger hamburger--active">
             <span class="hamburger__box">
@@ -28,6 +28,7 @@
             <div id="mars" class="planet">
             </div>
             <div id="neptune" class="neptune-planet"></div>
+            <div id="saturn" class="saturn-planet"></div>
             <div id="sun" class="sun"></div>
         </div>
         <div class="dashboard">
@@ -36,7 +37,7 @@
                     <!-- Mars -->
                     <div class="mars__planet"></div>
                     <div id="mars-status" class="mars-status">
-                        <button class="up" onclick="upgrade(0)">Upgrade - cost:10</button>
+                        <button class="up" onclick="upgrade(0)">Upgrade - cost: 10 g</button>
                         <div class="level">0 lvl</div>
                     </div>
                 </div>
@@ -45,21 +46,21 @@
                     <div class="neptune__planet"></div>
                     <div id="neptune-status" class="neptune-status">
                         <div class="btn-box">
-                            <button class="up" onclick="upgrade(1)">Upgrade - cost:50</button>
+                            <button class="up" onclick="upgrade(1)">Upgrade - cost: 50 g</button>
                         </div>
                         <div class="neptune-status-box">
                             <div class="level">0 lvl</div>
                         </div>
                     </div>
                 </div>
-                <div class="venus">
+                <div class="saturn">
                     <!-- venus -->
-                    <div class="venus__planet"></div>
-                    <div id="venus-status" class="venus-status">
+                    <div class="saturn__planet"></div>
+                    <div id="saturn-status" class="saturn-status">
                         <div class="btn-box">
-                            <button class="up" onclick="upgrade(2)">Upgrade - cost:200</button>
+                            <button class="up" onclick="upgrade(2)">Upgrade - cost: 200 g</button>
                         </div>
-                        <div class="venus-status-box">
+                        <div class="saturn-status-box">
                             <div class="level">0 lvl</div>
                         </div>
                     </div>
